@@ -8,12 +8,12 @@ package main
 
 import (
 	"database/sql"
-	"github.com/devfullcycle/20-CleanArch/internal/entity"
-	"github.com/devfullcycle/20-CleanArch/internal/event"
-	"github.com/devfullcycle/20-CleanArch/internal/infra/database"
-	"github.com/devfullcycle/20-CleanArch/internal/infra/web"
-	"github.com/devfullcycle/20-CleanArch/internal/usecase"
-	"github.com/devfullcycle/20-CleanArch/pkg/events"
+	"github.com/flpnascto/clean-architecture-go/internal/entity"
+	"github.com/flpnascto/clean-architecture-go/internal/event"
+	"github.com/flpnascto/clean-architecture-go/internal/infra/database"
+	"github.com/flpnascto/clean-architecture-go/internal/infra/web"
+	"github.com/flpnascto/clean-architecture-go/internal/usecase"
+	"github.com/flpnascto/clean-architecture-go/pkg/events"
 	"github.com/google/wire"
 )
 
