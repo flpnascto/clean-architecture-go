@@ -46,10 +46,11 @@ Além disto é bom ter um editor para trabalhar com o código como VSCode.
    ```
 4. Executando as aplicações
 
-    1. Acesse o diretório `./cmd/ordersystem`
-    2. Execute o comando `go run main.go wire_gen.go`
-    3. O web server executa na port 8000
-    4. O gRPC executa na porta 50051
-    5. O GraphQL executa na porta 8080
-    6. O RabbitMQ pode ser acessado na porta 15672
+    1. Execute as migrations com `make migrate`
+    2. Acesse o diretório `./cmd/ordersystem`
+    3. Execute o comando `go run main.go wire_gen.go`
+    4. O web server executa na port 8000
+    5. O gRPC executa na porta 50051
+    6. O GraphQL executa na porta 8080
+    7. O RabbitMQ pode ser acessado na porta 15672
 
