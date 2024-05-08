@@ -15,12 +15,14 @@ type WebOrderHandler struct {
 	OrderCreatedEvent events.EventInterface
 	ListOrdersEvent   events.EventInterface
 }
+type OrderCreatedEventInterface interface{ events.EventInterface }
+type ListOrdersEventInterface interface{ events.EventInterface }
 
 func NewWebOrderHandler(
 	EventDispatcher events.EventDispatcherInterface,
 	OrderRepository entity.OrderRepositoryInterface,
-	OrderCreatedEvent events.EventInterface,
-	ListOrdersEvent events.EventInterface,
+	OrderCreatedEvent OrderCreatedEventInterface,
+	ListOrdersEvent ListOrdersEventInterface,
 ) *WebOrderHandler {
 	return &WebOrderHandler{
 		EventDispatcher:   EventDispatcher,
