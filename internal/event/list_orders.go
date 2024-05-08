@@ -17,12 +17,12 @@ func (e *ListOrders) GetName() string {
 	return e.Name
 }
 
-func (e *ListOrders) GetPayload() []interface{} {
+func (e *ListOrders) GetPayload() interface{} {
 	return e.Payload
 }
 
-func (e *ListOrders) SetPayload(payload []interface{}) {
-	e.Payload = payload
+func (e *ListOrders) SetPayload(payload interface{}) {
+	e.Payload = append(e.Payload, payload)
 }
 
 func (e *ListOrders) GetDateTime() time.Time {

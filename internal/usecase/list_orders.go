@@ -31,15 +31,16 @@ func (c *ListOrdersUseCaseType) Execute() ([]OrderOutputDTO, error) {
 
 	var dto []OrderOutputDTO
 	for _, order := range orders {
-		dto = append(dto, OrderOutputDTO{
+		newOrder := OrderOutputDTO{
 			ID:         order.ID,
 			Price:      order.Price,
 			Tax:        order.Tax,
 			FinalPrice: order.FinalPrice,
-		})
+		}
+		dto = append(dto, newOrder)
+		c.ListOrders.SetPayload(newOrder)
 	}
 
-	c.ListOrders.SetPayload(dto)
 	c.EventDispatcher.Dispatch(c.ListOrders)
 
 	return dto, nil
